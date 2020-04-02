@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>GF后台管理系统 - GF-Alpha </title>
+    <link rel="stylesheet" href="/plugin/layui-v2.5.5/css/layui.css">
+    <link rel="stylesheet" href="/resource/css/admin.css">
+    <script src="/plugin/jquery-v3.4.0/jquery.min.js"></script>
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header" id="top-header">
+        <div class="layui-logo">GF-ALPHA</div>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                    John
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">基本资料</a></dd>
+                    <dd><a href="">安全设置</a></dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black" id="side-menu">
+        <div class="layui-side-scroll">
+            <div class="layui-logo">
+                GF管理后台
+            </div>
+            {{include "aside.html" .}}
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <div id="main-body">
+            <div class="layui-card">
+                <div class="layui-breadcrumb" id="breadcrumb">
+                    <a lay-href="">主页</a><span lay-separator="">/</span>
+
+
+
+                    <a><cite>设置</cite></a><span lay-separator="">/</span>
+                    <a><cite>网站设置</cite></a>
+                </div>
+            </div>
+
+
+            {{include .mainTpl .}}
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-footer">
+        © goframe.org
+    </div>
+</div>
+<script src="/plugin/layui-v2.5.5/layui.all.js"></script>
+<script src="/resource/js/admin.js"></script>
+</body>
+</html>

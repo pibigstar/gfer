@@ -1,0 +1,62 @@
+<div class="layui-card">
+    <div class="layui-card-body">
+        {{dump .}}
+        {{.nnn}}
+        <table class="layui-table">
+            <thead>
+            <tr>
+                <th>服务名称</th>
+                <th>路由地址</th>
+                <th>请求方式</th>
+                <th>路由名称</th>
+                <th>自定义描述</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            {{range $key, $item :=.routes}}
+                {{if $item.IsServiceHandler}}
+                    <tr>
+                        <td>{{$item.Server}}</td>
+                        <td>{{$item.Route}}</td>
+                        <td>{{$item.Method}}</td>
+                    </tr>
+                {{end}}
+            {{end}}
+
+
+            <tr>
+                <td>贤心</td>
+                <td>汉族</td>
+                <td>1989-10-14</td>
+                <td>人生似修行</td>
+            </tr>
+            <tr>
+                <td>张爱玲</td>
+                <td>汉族</td>
+                <td>1920-09-30</td>
+                <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+            </tr>
+            <tr>
+                <td>Helen Keller</td>
+                <td>拉丁美裔</td>
+                <td>1880-06-27</td>
+                <td> Life is either a daring adventure or nothing.</td>
+            </tr>
+            <tr>
+                <td>岳飞</td>
+                <td>汉族</td>
+                <td>1103-北宋崇宁二年</td>
+                <td>教科书再滥改，也抹不去“民族英雄”的事实</td>
+            </tr>
+            <tr>
+                <td>孟子</td>
+                <td>华夏族（汉族）</td>
+                <td>公元前-372年</td>
+                <td>猿强，则国强。国强，则猿更强！ </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
